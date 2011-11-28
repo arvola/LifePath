@@ -1,6 +1,7 @@
 $:.unshift(File.expand_path(File.dirname(__FILE__)))
 $:.unshift(File.expand_path(File.dirname(__FILE__)) + "/lib")
 $BASE_PATH = File.expand_path(File.dirname(__FILE__) + "/../")
+$APPS_PATH = $BASE_PATH + "/apps"
 
 require 'log'
 require 'buffer'

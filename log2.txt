@@ -465,3 +465,281 @@ D, [2011-11-28T10:37:33.742845 #27381] DEBUG -- : -----------------RAPIDRUBY PRO
 D, [2011-11-28T10:37:33.742895 #27381] DEBUG -- : get_response
 D, [2011-11-28T10:37:33.742951 #27381] DEBUG -- : Firing event pre_response
 D, [2011-11-28T10:37:33.743003 #27381] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T10:58:59.192777 #27669] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T10:58:59.193180 #27669] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T10:58:59.322039 #27669] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T10:58:59.747119 #27675] DEBUG -- : Entering boot for /foo/bar
+D, [2011-11-28T10:58:59.748978 #27675] DEBUG -- : Get raw: 
+D, [2011-11-28T10:58:59.749096 #27675] DEBUG -- : Post raw: 
+D, [2011-11-28T10:58:59.749224 #27675] DEBUG -- : Creating event error
+D, [2011-11-28T10:58:59.749401 #27675] DEBUG -- : Creating event after
+D, [2011-11-28T10:58:59.749535 #27675] DEBUG -- : Creating event before
+D, [2011-11-28T10:58:59.749693 #27675] DEBUG -- : Creating event pre_response
+D, [2011-11-28T10:58:59.749860 #27675] DEBUG -- : Subscribing to event error
+D, [2011-11-28T10:58:59.749988 #27675] DEBUG -- : App initialized: Rapid::MvcApp
+D, [2011-11-28T10:58:59.750323 #27675] DEBUG -- : [MVC] Found controller file: /var/www/mvc/controllers/mvc.rb
+D, [2011-11-28T10:58:59.758155 #27675] DEBUG -- : Running MVC for 'foo' with action: index
+D, [2011-11-28T10:58:59.758337 #27675] DEBUG -- : Firing event error
+D, [2011-11-28T10:58:59.758807 #27675] DEBUG -- : /var/www/templates/error.haml
+D, [2011-11-28T10:58:59.758993 #27675] DEBUG -- : Rendering template error.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T10:59:00.112542 #27675] DEBUG -- : Available blocks: [:content]
+D, [2011-11-28T10:59:00.112756 #27675] DEBUG -- : Extends call: /var/www/templates/base.haml
+D, [2011-11-28T10:59:00.113020 #27675] DEBUG -- : /var/www/templates/base.haml
+D, [2011-11-28T10:59:00.113148 #27675] DEBUG -- : Rendering template /var/www/templates/base.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T10:59:00.133984 #27675] DEBUG -- : Available blocks: [:content]
+W, [2011-11-28T10:59:00.134168 #27675]  WARN -- : Error handler called with "The requested page does not exist.", code 404 (trace: [])
+D, [2011-11-28T10:59:00.134259 #27675] DEBUG -- : Buffer shield: 
+D, [2011-11-28T10:59:00.134313 #27675] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T10:59:00.134368 #27675] DEBUG -- : get_response
+D, [2011-11-28T10:59:00.134430 #27675] DEBUG -- : Firing event pre_response
+D, [2011-11-28T10:59:00.134488 #27675] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T10:59:00.460633 #27679] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T10:59:00.460884 #27679] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T10:59:00.587438 #27679] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T10:59:01.063509 #27685] DEBUG -- : Entering boot for /favicon.ico
+D, [2011-11-28T10:59:01.065235 #27685] DEBUG -- : Get raw: 
+D, [2011-11-28T10:59:01.065343 #27685] DEBUG -- : Post raw: 
+D, [2011-11-28T10:59:01.065490 #27685] DEBUG -- : Creating event error
+D, [2011-11-28T10:59:01.065615 #27685] DEBUG -- : Creating event after
+D, [2011-11-28T10:59:01.065765 #27685] DEBUG -- : Creating event before
+D, [2011-11-28T10:59:01.065857 #27685] DEBUG -- : Creating event pre_response
+D, [2011-11-28T10:59:01.066005 #27685] DEBUG -- : Subscribing to event error
+D, [2011-11-28T10:59:01.066118 #27685] DEBUG -- : App initialized: Rapid::ProceduralApp
+D, [2011-11-28T10:59:01.066317 #27685] DEBUG -- : --------- Running app Rapid::ProceduralApp
+D, [2011-11-28T10:59:01.066403 #27685] DEBUG -- : Firing event before
+D, [2011-11-28T10:59:01.066488 #27685] DEBUG -- : No listeners for event before
+D, [2011-11-28T10:59:01.067001 #27685] DEBUG -- : Controller file not found for favicon.ico
+D, [2011-11-28T10:59:01.067106 #27685] DEBUG -- : Firing event error
+D, [2011-11-28T10:59:01.067977 #27685] DEBUG -- : /var/www/templates/error.haml
+D, [2011-11-28T10:59:01.068347 #27685] DEBUG -- : Rendering template error.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T10:59:01.425299 #27685] DEBUG -- : Available blocks: [:content]
+D, [2011-11-28T10:59:01.425515 #27685] DEBUG -- : Extends call: /var/www/templates/base.haml
+D, [2011-11-28T10:59:01.425802 #27685] DEBUG -- : /var/www/templates/base.haml
+D, [2011-11-28T10:59:01.425932 #27685] DEBUG -- : Rendering template /var/www/templates/base.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T10:59:01.447242 #27685] DEBUG -- : Available blocks: [:content]
+W, [2011-11-28T10:59:01.447496 #27685]  WARN -- : Error handler called with "The requested page does not exist.", code 404 (trace: [])
+D, [2011-11-28T10:59:01.447609 #27685] DEBUG -- : Buffer shield: 
+D, [2011-11-28T10:59:01.447668 #27685] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T10:59:01.447723 #27685] DEBUG -- : get_response
+D, [2011-11-28T10:59:01.447786 #27685] DEBUG -- : Firing event pre_response
+D, [2011-11-28T10:59:01.447844 #27685] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T11:23:49.815701 #28017] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:23:49.815961 #28017] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:23:49.944209 #28017] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:23:50.368346 #28023] DEBUG -- : Entering boot for /mvc/foo
+D, [2011-11-28T11:23:50.373447 #28023] DEBUG -- : Get raw: 
+D, [2011-11-28T11:23:50.373560 #28023] DEBUG -- : Post raw: 
+D, [2011-11-28T11:23:50.373714 #28023] DEBUG -- : Creating event error
+D, [2011-11-28T11:23:50.373876 #28023] DEBUG -- : Creating event after
+D, [2011-11-28T11:23:50.374004 #28023] DEBUG -- : Creating event before
+D, [2011-11-28T11:23:50.374115 #28023] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:23:50.374290 #28023] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:23:50.374413 #28023] DEBUG -- : App initialized: Rapid::MvcApp
+D, [2011-11-28T11:23:50.374719 #28023] DEBUG -- : [MVC] Found controller file: /var/www/mvc/controllers/mvc.rb
+D, [2011-11-28T11:23:50.383812 #28023] DEBUG -- : Running MVC for 'mvc' with action: index
+D, [2011-11-28T11:23:50.384042 #28023] DEBUG -- : Buffer shield: 
+D, [2011-11-28T11:23:50.384111 #28023] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T11:23:50.384177 #28023] DEBUG -- : get_response
+D, [2011-11-28T11:23:50.384271 #28023] DEBUG -- : Firing event pre_response
+D, [2011-11-28T11:23:50.384347 #28023] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T11:23:50.712942 #28027] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:23:50.713196 #28027] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:23:50.840142 #28027] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:23:51.290138 #28033] DEBUG -- : Entering boot for /favicon.ico
+D, [2011-11-28T11:23:51.291903 #28033] DEBUG -- : Get raw: 
+D, [2011-11-28T11:23:51.292037 #28033] DEBUG -- : Post raw: 
+D, [2011-11-28T11:23:51.292168 #28033] DEBUG -- : Creating event error
+D, [2011-11-28T11:23:51.292331 #28033] DEBUG -- : Creating event after
+D, [2011-11-28T11:23:51.292470 #28033] DEBUG -- : Creating event before
+D, [2011-11-28T11:23:51.292608 #28033] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:23:51.292786 #28033] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:23:51.292907 #28033] DEBUG -- : App initialized: Rapid::ProceduralApp
+D, [2011-11-28T11:23:51.293099 #28033] DEBUG -- : --------- Running app Rapid::ProceduralApp
+D, [2011-11-28T11:23:51.293195 #28033] DEBUG -- : Firing event before
+D, [2011-11-28T11:23:51.293270 #28033] DEBUG -- : No listeners for event before
+D, [2011-11-28T11:23:51.293726 #28033] DEBUG -- : Controller file not found for favicon.ico
+D, [2011-11-28T11:23:51.293828 #28033] DEBUG -- : Firing event error
+D, [2011-11-28T11:23:51.294487 #28033] DEBUG -- : /var/www/templates/error.haml
+D, [2011-11-28T11:23:51.294855 #28033] DEBUG -- : Rendering template error.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:23:51.660162 #28033] DEBUG -- : Available blocks: [:content]
+D, [2011-11-28T11:23:51.660302 #28033] DEBUG -- : Extends call: /var/www/templates/base.haml
+D, [2011-11-28T11:23:51.660519 #28033] DEBUG -- : /var/www/templates/base.haml
+D, [2011-11-28T11:23:51.660607 #28033] DEBUG -- : Rendering template /var/www/templates/base.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:23:51.681500 #28033] DEBUG -- : Available blocks: [:content]
+W, [2011-11-28T11:23:51.681667 #28033]  WARN -- : Error handler called with "The requested page does not exist.", code 404 (trace: [])
+D, [2011-11-28T11:23:51.681760 #28033] DEBUG -- : Buffer shield: 
+D, [2011-11-28T11:23:51.681814 #28033] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T11:23:51.681870 #28033] DEBUG -- : get_response
+D, [2011-11-28T11:23:51.681932 #28033] DEBUG -- : Firing event pre_response
+D, [2011-11-28T11:23:51.681990 #28033] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T11:27:46.896067 #28084] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:27:46.896325 #28084] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:27:47.024651 #28084] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:27:47.449982 #28090] DEBUG -- : Entering boot for /mvc/foo
+D, [2011-11-28T11:27:47.451777 #28090] DEBUG -- : Get raw: 
+D, [2011-11-28T11:27:47.451887 #28090] DEBUG -- : Post raw: 
+D, [2011-11-28T11:27:47.452039 #28090] DEBUG -- : Creating event error
+D, [2011-11-28T11:27:47.452210 #28090] DEBUG -- : Creating event after
+D, [2011-11-28T11:27:47.452318 #28090] DEBUG -- : Creating event before
+D, [2011-11-28T11:27:47.452452 #28090] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:27:47.452630 #28090] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:27:47.452730 #28090] DEBUG -- : App initialized: Rapid::MvcApp
+D, [2011-11-28T11:27:47.791433 #28093] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:27:47.791699 #28093] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:27:47.919212 #28093] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:27:48.351541 #28099] DEBUG -- : Entering boot for /favicon.ico
+D, [2011-11-28T11:27:48.353548 #28099] DEBUG -- : Get raw: 
+D, [2011-11-28T11:27:48.353696 #28099] DEBUG -- : Post raw: 
+D, [2011-11-28T11:27:48.353820 #28099] DEBUG -- : Creating event error
+D, [2011-11-28T11:27:48.354000 #28099] DEBUG -- : Creating event after
+D, [2011-11-28T11:27:48.354164 #28099] DEBUG -- : Creating event before
+D, [2011-11-28T11:27:48.354300 #28099] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:27:48.354492 #28099] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:27:48.354654 #28099] DEBUG -- : App initialized: Rapid::ProceduralApp
+D, [2011-11-28T11:27:48.354903 #28099] DEBUG -- : --------- Running app Rapid::ProceduralApp
+D, [2011-11-28T11:27:48.355030 #28099] DEBUG -- : Firing event before
+D, [2011-11-28T11:27:48.355137 #28099] DEBUG -- : No listeners for event before
+D, [2011-11-28T11:27:48.355880 #28099] DEBUG -- : Controller file not found for favicon.ico
+D, [2011-11-28T11:27:48.356004 #28099] DEBUG -- : Firing event error
+D, [2011-11-28T11:27:48.356674 #28099] DEBUG -- : /var/www/templates/error.haml
+D, [2011-11-28T11:27:48.356903 #28099] DEBUG -- : Rendering template error.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:27:48.709110 #28099] DEBUG -- : Available blocks: [:content]
+D, [2011-11-28T11:27:48.709253 #28099] DEBUG -- : Extends call: /var/www/templates/base.haml
+D, [2011-11-28T11:27:48.709463 #28099] DEBUG -- : /var/www/templates/base.haml
+D, [2011-11-28T11:27:48.709546 #28099] DEBUG -- : Rendering template /var/www/templates/base.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:27:48.729945 #28099] DEBUG -- : Available blocks: [:content]
+W, [2011-11-28T11:27:48.730109 #28099]  WARN -- : Error handler called with "The requested page does not exist.", code 404 (trace: [])
+D, [2011-11-28T11:27:48.730199 #28099] DEBUG -- : Buffer shield: 
+D, [2011-11-28T11:27:48.730253 #28099] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T11:27:48.730309 #28099] DEBUG -- : get_response
+D, [2011-11-28T11:27:48.730372 #28099] DEBUG -- : Firing event pre_response
+D, [2011-11-28T11:27:48.730432 #28099] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T11:29:04.773764 #28184] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:29:04.774022 #28184] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:29:04.900606 #28184] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:29:05.346448 #28191] DEBUG -- : Entering boot for /
+D, [2011-11-28T11:29:05.347668 #28191] DEBUG -- : Get raw: 
+D, [2011-11-28T11:29:05.347743 #28191] DEBUG -- : Post raw: 
+D, [2011-11-28T11:29:05.347819 #28191] DEBUG -- : Creating event error
+D, [2011-11-28T11:29:05.347900 #28191] DEBUG -- : Creating event after
+D, [2011-11-28T11:29:05.347972 #28191] DEBUG -- : Creating event before
+D, [2011-11-28T11:29:05.348041 #28191] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:29:05.348144 #28191] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:29:05.348217 #28191] DEBUG -- : App initialized: Rapid::ProceduralApp
+D, [2011-11-28T11:29:05.348330 #28191] DEBUG -- : --------- Running app Rapid::ProceduralApp
+D, [2011-11-28T11:29:05.348386 #28191] DEBUG -- : Firing event before
+D, [2011-11-28T11:29:05.348444 #28191] DEBUG -- : No listeners for event before
+D, [2011-11-28T11:29:05.348689 #28191] DEBUG -- : Controller file not found for index
+D, [2011-11-28T11:29:05.348749 #28191] DEBUG -- : Firing event error
+D, [2011-11-28T11:29:05.349117 #28191] DEBUG -- : /var/www/templates/error.haml
+D, [2011-11-28T11:29:05.349247 #28191] DEBUG -- : Rendering template error.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:29:05.651292 #28194] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:29:05.651672 #28194] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:29:05.749379 #28191] DEBUG -- : Available blocks: [:content]
+D, [2011-11-28T11:29:05.749524 #28191] DEBUG -- : Extends call: /var/www/templates/base.haml
+D, [2011-11-28T11:29:05.749813 #28191] DEBUG -- : /var/www/templates/base.haml
+D, [2011-11-28T11:29:05.749903 #28191] DEBUG -- : Rendering template /var/www/templates/base.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:29:05.774696 #28191] DEBUG -- : Available blocks: [:content]
+W, [2011-11-28T11:29:05.774861 #28191]  WARN -- : Error handler called with "The requested page does not exist.", code 404 (trace: [])
+D, [2011-11-28T11:29:05.774952 #28191] DEBUG -- : Buffer shield: 
+D, [2011-11-28T11:29:05.775040 #28191] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T11:29:05.775127 #28191] DEBUG -- : get_response
+D, [2011-11-28T11:29:05.775217 #28191] DEBUG -- : Firing event pre_response
+D, [2011-11-28T11:29:05.775303 #28191] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T11:29:05.793736 #28194] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:29:06.200625 #28200] DEBUG -- : Entering boot for /mvc/foo
+D, [2011-11-28T11:29:06.202163 #28200] DEBUG -- : Get raw: 
+D, [2011-11-28T11:29:06.202260 #28200] DEBUG -- : Post raw: 
+D, [2011-11-28T11:29:06.202354 #28200] DEBUG -- : Creating event error
+D, [2011-11-28T11:29:06.202452 #28200] DEBUG -- : Creating event after
+D, [2011-11-28T11:29:06.202526 #28200] DEBUG -- : Creating event before
+D, [2011-11-28T11:29:06.202594 #28200] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:29:06.202705 #28200] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:29:06.202778 #28200] DEBUG -- : App initialized: Rapid::MvcApp
+D, [2011-11-28T11:29:06.572461 #28204] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:29:06.572710 #28204] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:29:06.697756 #28204] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:29:07.103489 #28210] DEBUG -- : Entering boot for /favicon.ico
+D, [2011-11-28T11:29:07.105150 #28210] DEBUG -- : Get raw: 
+D, [2011-11-28T11:29:07.105239 #28210] DEBUG -- : Post raw: 
+D, [2011-11-28T11:29:07.105342 #28210] DEBUG -- : Creating event error
+D, [2011-11-28T11:29:07.105467 #28210] DEBUG -- : Creating event after
+D, [2011-11-28T11:29:07.105554 #28210] DEBUG -- : Creating event before
+D, [2011-11-28T11:29:07.105636 #28210] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:29:07.105744 #28210] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:29:07.105829 #28210] DEBUG -- : App initialized: Rapid::ProceduralApp
+D, [2011-11-28T11:29:07.106000 #28210] DEBUG -- : --------- Running app Rapid::ProceduralApp
+D, [2011-11-28T11:29:07.106073 #28210] DEBUG -- : Firing event before
+D, [2011-11-28T11:29:07.106143 #28210] DEBUG -- : No listeners for event before
+D, [2011-11-28T11:29:07.106480 #28210] DEBUG -- : Controller file not found for favicon.ico
+D, [2011-11-28T11:29:07.106575 #28210] DEBUG -- : Firing event error
+D, [2011-11-28T11:29:07.107167 #28210] DEBUG -- : /var/www/templates/error.haml
+D, [2011-11-28T11:29:07.107341 #28210] DEBUG -- : Rendering template error.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:29:07.498351 #28210] DEBUG -- : Available blocks: [:content]
+D, [2011-11-28T11:29:07.498494 #28210] DEBUG -- : Extends call: /var/www/templates/base.haml
+D, [2011-11-28T11:29:07.498701 #28210] DEBUG -- : /var/www/templates/base.haml
+D, [2011-11-28T11:29:07.498786 #28210] DEBUG -- : Rendering template /var/www/templates/base.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:29:07.519156 #28210] DEBUG -- : Available blocks: [:content]
+W, [2011-11-28T11:29:07.519347 #28210]  WARN -- : Error handler called with "The requested page does not exist.", code 404 (trace: [])
+D, [2011-11-28T11:29:07.519440 #28210] DEBUG -- : Buffer shield: 
+D, [2011-11-28T11:29:07.519496 #28210] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T11:29:07.519551 #28210] DEBUG -- : get_response
+D, [2011-11-28T11:29:07.519642 #28210] DEBUG -- : Firing event pre_response
+D, [2011-11-28T11:29:07.519701 #28210] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T11:30:47.411070 #28241] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:30:47.411473 #28241] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:30:47.540103 #28241] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:30:47.984642 #28247] DEBUG -- : Entering boot for /mvc/foo
+D, [2011-11-28T11:30:47.986313 #28247] DEBUG -- : Get raw: 
+D, [2011-11-28T11:30:47.986459 #28247] DEBUG -- : Post raw: 
+D, [2011-11-28T11:30:47.986614 #28247] DEBUG -- : Creating event error
+D, [2011-11-28T11:30:47.986749 #28247] DEBUG -- : Creating event after
+D, [2011-11-28T11:30:47.986868 #28247] DEBUG -- : Creating event before
+D, [2011-11-28T11:30:47.986985 #28247] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:30:47.987128 #28247] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:30:47.987233 #28247] DEBUG -- : App initialized: Rapid::MvcApp
+D, [2011-11-28T11:30:47.993215 #28247] DEBUG -- : Running MVC for 'mvc' with action: index
+D, [2011-11-28T11:30:47.993441 #28247] DEBUG -- : Firing event error
+D, [2011-11-28T11:30:47.994053 #28247] DEBUG -- : /var/www/templates/error.haml
+D, [2011-11-28T11:30:47.994296 #28247] DEBUG -- : Rendering template error.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:30:48.401936 #28247] DEBUG -- : Available blocks: [:content]
+D, [2011-11-28T11:30:48.402094 #28247] DEBUG -- : Extends call: /var/www/templates/base.haml
+D, [2011-11-28T11:30:48.402329 #28247] DEBUG -- : /var/www/templates/base.haml
+D, [2011-11-28T11:30:48.402462 #28247] DEBUG -- : Rendering template /var/www/templates/base.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:30:48.425008 #28247] DEBUG -- : Available blocks: [:content]
+W, [2011-11-28T11:30:48.425245 #28247]  WARN -- : Error handler called with "The requested page does not exist.", code 404 (trace: [])
+D, [2011-11-28T11:30:48.425373 #28247] DEBUG -- : Buffer shield: 
+D, [2011-11-28T11:30:48.425459 #28247] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T11:30:48.425544 #28247] DEBUG -- : get_response
+D, [2011-11-28T11:30:48.425640 #28247] DEBUG -- : Firing event pre_response
+D, [2011-11-28T11:30:48.425730 #28247] DEBUG -- : No listeners for event pre_response
+D, [2011-11-28T11:30:48.761353 #28250] DEBUG -- : -----------------RAPIDRUBY PROCESS STARTED-----------------
+D, [2011-11-28T11:30:48.761618 #28250] DEBUG -- : Found app file: /var/www/rapid/lib/app/mvc_app.rb
+D, [2011-11-28T11:30:48.886530 #28250] DEBUG -- : Found app file: /var/www/rapid/lib/app/procedural_app.rb
+D, [2011-11-28T11:30:49.296240 #28256] DEBUG -- : Entering boot for /favicon.ico
+D, [2011-11-28T11:30:49.297720 #28256] DEBUG -- : Get raw: 
+D, [2011-11-28T11:30:49.297795 #28256] DEBUG -- : Post raw: 
+D, [2011-11-28T11:30:49.297880 #28256] DEBUG -- : Creating event error
+D, [2011-11-28T11:30:49.297977 #28256] DEBUG -- : Creating event after
+D, [2011-11-28T11:30:49.298057 #28256] DEBUG -- : Creating event before
+D, [2011-11-28T11:30:49.298127 #28256] DEBUG -- : Creating event pre_response
+D, [2011-11-28T11:30:49.298232 #28256] DEBUG -- : Subscribing to event error
+D, [2011-11-28T11:30:49.298303 #28256] DEBUG -- : App initialized: Rapid::ProceduralApp
+D, [2011-11-28T11:30:49.298448 #28256] DEBUG -- : --------- Running app Rapid::ProceduralApp
+D, [2011-11-28T11:30:49.298515 #28256] DEBUG -- : Firing event before
+D, [2011-11-28T11:30:49.298572 #28256] DEBUG -- : No listeners for event before
+D, [2011-11-28T11:30:49.298847 #28256] DEBUG -- : Controller file not found for favicon.ico
+D, [2011-11-28T11:30:49.298914 #28256] DEBUG -- : Firing event error
+D, [2011-11-28T11:30:49.299391 #28256] DEBUG -- : /var/www/templates/error.haml
+D, [2011-11-28T11:30:49.299540 #28256] DEBUG -- : Rendering template error.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:30:49.693396 #28256] DEBUG -- : Available blocks: [:content]
+D, [2011-11-28T11:30:49.693543 #28256] DEBUG -- : Extends call: /var/www/templates/base.haml
+D, [2011-11-28T11:30:49.693762 #28256] DEBUG -- : /var/www/templates/base.haml
+D, [2011-11-28T11:30:49.693852 #28256] DEBUG -- : Rendering template /var/www/templates/base.haml with context keys [:title, :message, :error_code, :trace]
+D, [2011-11-28T11:30:49.715368 #28256] DEBUG -- : Available blocks: [:content]
+W, [2011-11-28T11:30:49.715658 #28256]  WARN -- : Error handler called with "The requested page does not exist.", code 404 (trace: [])
+D, [2011-11-28T11:30:49.715762 #28256] DEBUG -- : Buffer shield: 
+D, [2011-11-28T11:30:49.715818 #28256] DEBUG -- : -----------------RAPIDRUBY PROCESS SHUTDOWN-----------------
+D, [2011-11-28T11:30:49.715874 #28256] DEBUG -- : get_response
+D, [2011-11-28T11:30:49.715939 #28256] DEBUG -- : Firing event pre_response
+D, [2011-11-28T11:30:49.715999 #28256] DEBUG -- : No listeners for event pre_response
