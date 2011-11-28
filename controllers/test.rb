@@ -1,0 +1,2 @@
+
+puts render('test.haml')

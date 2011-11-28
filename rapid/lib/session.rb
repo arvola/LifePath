@@ -1,0 +1,3 @@
+module Rapid
+    
+end

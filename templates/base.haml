@@ -1,0 +1,14 @@
+!!! 5
+%html
+    %head
+        %title RapidRuby
+    %body
+        #asswipe
+            = block(:content) do
+                %h1 Default content
+        #testform
+            %form{method: 'post'}
+                %input{type: 'hidden', value: 'test', name: 'asd'}
+                %input{type: 'text', name: 'asd2'}
+                %input{type: 'submit'}
+                
