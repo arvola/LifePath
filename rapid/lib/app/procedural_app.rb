@@ -8,8 +8,11 @@ module Rapid
   # A normal web page script, procedural style
   class ProceduralApp < App
     include Pages
-    @@controller_path = $APPS_PATH + "procedural/controllers/"
-    @@file_cache = {}
+    class << self
+      attr_accessor :controller_path, :file_cache
+    end
+    @controller_path = $APPS_PATH + "/procedural/controllers/"
+    @file_cache = {}
 
     def self.router
       router        = Router.new(ProceduralApp) { true }
@@ -21,7 +24,6 @@ module Rapid
       super env
 
       @content_type = 'text/html'
-
     end
 
     def pap var
@@ -42,17 +44,17 @@ module Rapid
       @controller = 'index' unless @controller
 
       # Build the path to the controller file
-      @control_file = @@controller_path + @controller + ".rb"
+      @control_file = self.class.controller_path + @controller + ".rb"
 
       # When something, such as an error, happens and we don't want to
       # finish
 
       begin
         File.open(@control_file, 'r') do |file|
-          @@file_cache[@controller] = file.read
-        end unless @@file_cache.key? @controller
+          self.class.file_cache[@controller] = file.read
+        end unless self.class.file_cache.key? @controller
 
-        controller = @@file_cache[@controller]
+        controller = self.class.file_cache[@controller]
 
         # Assume a success status
         @status    = 200
@@ -82,7 +84,7 @@ module Rapid
       # Finished, fire the after event
       @e.after self
 
-      return self
+      self
     end
   end
 end

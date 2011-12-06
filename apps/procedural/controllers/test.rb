@@ -1,2 +1,2 @@
 
-puts render('test.haml')
+puts 'foobars'

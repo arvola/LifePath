@@ -1,12 +1,9 @@
 require 'mvc/controller'
 
 class Mvc < Rapid::Controller
-    def initialize
 
-    end
-    
     def index_action
-        puts "foobar"
+        puts render "test"
     end
 
     def foo_action

@@ -1,2 +1,6 @@
 .idea
 .svn
+prof/
+log/
+log2.txt
+unicorn.*.log

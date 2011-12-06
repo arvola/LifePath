@@ -2,7 +2,7 @@ module Rapid
 
     # An object that defines a route for RapidRuby
     class Router
-        attr_reader :app
+        attr_reader :app, :instance
 
         # Greater weights get processed later. Light
         # routers are thus prioritized
