@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title RapidRuby
+
+    javascript:
+      window.$R = #{{js_vars}};
+
+  body
+    h1 Markup examples
+    #content.example1
+      p Nest by indentation
+
+    == yield
+
+    #footer
+      | Foo bar

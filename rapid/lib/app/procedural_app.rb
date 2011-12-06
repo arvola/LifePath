@@ -3,11 +3,13 @@ require 'exception'
 require 'rack'
 require 'ap'
 require 'router'
+require 'app_utility'
 
 module Rapid
   # A normal web page script, procedural style
   class ProceduralApp < App
     include Pages
+    include AppUtility
     class << self
       attr_accessor :controller_path, :file_cache
     end

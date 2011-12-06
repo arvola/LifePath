@@ -1,15 +1,14 @@
-require 'mvc/model_loader2'
+
+require 'app_utility'
 
 module Rapid
     class Controller
         include Pages
+        include AppUtility
 
         def initialize
-            @models = ModelLoader2.new
+
         end
 
-        def m
-            @models
-        end
     end
 end
