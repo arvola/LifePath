@@ -1,3 +1,8 @@
+# LifePath
+#
+# Author:: Mikael Arvola
+# License:: MIT
+
 require 'mvc/model_loader2'
 
 module Rapid

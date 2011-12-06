@@ -1,3 +1,8 @@
+# LifePath
+#
+# Author:: Mikael Arvola
+# License:: MIT
+
 module Rapid
     class ControllerException < StandardError
         def initialize msg, err, controller = null

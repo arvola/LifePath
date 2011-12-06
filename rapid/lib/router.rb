@@ -1,3 +1,8 @@
+# LifePath
+#
+# Author:: Mikael Arvola
+# License:: MIT
+
 module Rapid
 
     # An object that defines a route for RapidRuby

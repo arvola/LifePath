@@ -1,3 +1,8 @@
+# LifePath
+#
+# Author:: Mikael Arvola
+# License:: MIT
+
 require 'slim'
 require 'tilt'
 require 'templates'

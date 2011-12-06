@@ -1,3 +1,8 @@
+# LifePath
+#
+# Author:: Mikael Arvola
+# License:: MIT
+
 require 'app'
 require 'exception'
 require 'rack'

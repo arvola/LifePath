@@ -1,3 +1,8 @@
+# LifePath
+#
+# Author:: Mikael Arvola
+# License:: MIT
+
 require 'json'
 
 module Rapid
@@ -10,6 +15,13 @@ module Rapid
 
         def js_vars
             JSON.generate @javascript
+        end
+
+        def script src
+            '<script type="text/javascript" src="' + src + '"></script>'
+        end
+        def css src
+
         end
     end
 end

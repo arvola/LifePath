@@ -1,3 +1,8 @@
+# LifePath
+#
+# Author:: Mikael Arvola
+# License:: MIT
+
 require 'ruby-prof'
 booter = nil
 profiling = RubyProf.profile do

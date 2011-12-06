@@ -1,3 +1,8 @@
+# LifePath
+#
+# Author:: Mikael Arvola
+# License:: MIT
+
 require 'cgi'
 
 module Rapid
@@ -26,7 +31,7 @@ module Rapid
         def post key
             return nil if @post_raw.nil?
 
-            if !defined? @post
+            unless defined? @post
                 @post = Input.parse @post_raw
                 debuglog "POST string parsed: " << @post.to_s
             end
