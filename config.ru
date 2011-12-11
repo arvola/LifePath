@@ -3,6 +3,10 @@
 # Author:: Mikael Arvola
 # License:: MIT
 
+require 'encrypted_cookie'
+use Rack::Session::EncryptedCookie,
+  :secret => "\x81\xCBQl\xBC\xD0\x10\f\xCD|\xA6\xBD\xA2;>8"
+
 require 'ruby-prof'
 booter = nil
 profiling = RubyProf.profile do

@@ -58,7 +58,7 @@ module Rapid
                 end
             end
 
-            debuglog "Buffer shield: " + text
+            debuglog "Buffer shield: " + text if text
             debuglog "-----------------RAPIDRUBY PROCESS SHUTDOWN-----------------"
 
             profiling = RubyProf.stop

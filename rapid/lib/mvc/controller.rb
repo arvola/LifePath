@@ -11,8 +11,8 @@ module Rapid
         include Pages
         include AppUtility
 
-        def initialize
-
+        def initialize env
+            @env = env
         end
 
     end

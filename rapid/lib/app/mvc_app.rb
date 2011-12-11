@@ -78,7 +78,7 @@ module Rapid
         end
 
         def run_action control, action
-            controller = control.new
+            controller = control.new @env
             # This check in theory is redundant. Will restore if it becomes
             # a problem.
             #if controller.respond_to? ((action + "_action").to_sym)
