@@ -85,7 +85,6 @@ module Rapid
             buff = Rapid.buffer do
                 controller.send(action + "_action")
             end
-            buff
             #end
         end
     end

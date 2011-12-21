@@ -8,18 +8,31 @@ require 'database'
 module Rapid
     class Session
         def initialize uuid = nil
-            if uuid
+            if uuid && BSON::ObjectId.legal?(uuid)
                 Database.open "session" do |db|
                     @data = db.find_one({"_id" => BSON::ObjectId(uuid)})
                 end
-                @uuid = @data['_id']
+                if @data.nil?
+                    @data = {"type" => "temporary"}
+                    @uuid = db.insert(@data)
+                else
+                    @uuid = @data['_id']
+                end
             else
                 Database.open "session" do |db|
                     @data = {"type" => "temporary"}
                     @uuid = db.insert(@data)
                 end
             end
-            p @data
+        end
+
+        def Session.cache
+            @cache ||= {}
+        end
+
+        def Session.factory uuid
+            if cache.has_key? uuid
+            end
         end
 
         def Session.create user_id
@@ -43,6 +56,10 @@ module Rapid
             Database.open "session" do |db|
                 db.update({"_id" => @uuid}, {"$set" => {key => value}})
             end
+        end
+
+        def user_id
+            @data.has_key?('user_id') ? @data['user_id'] : nil
         end
     end
 end

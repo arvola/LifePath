@@ -29,6 +29,7 @@ module Pages
 
     def slim(template, data = {})
         scope.javascript = j
+        scope.template = template
         unless slim_cache.has_key? :base
             slim_cache[:base] = Tilt.new('templates/base.slim')
         end
@@ -38,6 +39,12 @@ module Pages
 
         slim_cache[:base].render(scope, data) do
             slim_cache[template].render(scope, data)
+        end
+    end
+
+    class Filter < Temple::HTML::Filter
+        def on_multi *exps
+            p exps
         end
     end
 end

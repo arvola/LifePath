@@ -4,10 +4,12 @@
 # License:: MIT
 
 require 'json'
+require 'form'
 
 module Rapid
     class TemplateScope
-        attr_accessor :javascript
+        include FormTools
+        attr_accessor :javascript, :template
 
         def initialize
             @javascript = {}
