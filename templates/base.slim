@@ -3,6 +3,7 @@ html
   head
     title RapidRuby
 
+    link href='/css/style.css' media='screen' rel='stylesheet' type='text/css'
     javascript:
       window.$R = #{{js_vars}};
 
@@ -14,4 +15,4 @@ html
     == yield
 
     #footer
-      | Foo bar
+      == render :footer

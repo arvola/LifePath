@@ -4,22 +4,23 @@
 # License:: MIT
 
 require 'database'
+require 'transaction'
 
 module Rapid
     class Session
+        include Transaction
+
         def initialize uuid = nil
-            if uuid && BSON::ObjectId.legal?(uuid)
-                Database.open "session" do |db|
+            Database.open "session" do |db|
+                if uuid && BSON::ObjectId.legal?(uuid)
                     @data = db.find_one({"_id" => BSON::ObjectId(uuid)})
-                end
-                if @data.nil?
-                    @data = {"type" => "temporary"}
-                    @uuid = db.insert(@data)
+                    if @data.nil?
+                        @data = {"type" => "temporary"}
+                        @uuid = db.insert(@data)
+                    else
+                        @uuid = @data['_id']
+                    end
                 else
-                    @uuid = @data['_id']
-                end
-            else
-                Database.open "session" do |db|
                     @data = {"type" => "temporary"}
                     @uuid = db.insert(@data)
                 end
@@ -53,13 +54,17 @@ module Rapid
 
         def []= key, value
             @data[key] = value
-            Database.open "session" do |db|
-                db.update({"_id" => @uuid}, {"$set" => {key => value}})
-            end
+            update "session", {"_id" => @uuid}, {key => value}
         end
 
         def user_id
             @data.has_key?('user_id') ? @data['user_id'] : nil
+        end
+
+        def end_transaction
+            Database.open "session" do |db|
+                do_end_transaction db
+            end
         end
     end
 end

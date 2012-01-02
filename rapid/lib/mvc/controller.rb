@@ -10,10 +10,21 @@ module Rapid
     class Controller
         include Pages
         include AppUtility
+        attr_accessor :app
 
-        def initialize env
+        def initialize env, app
             @env = env
+            @app = app
         end
 
+        def get key = nil
+            @app.in.get key
+        end
+        def post key = nil
+            @app.in.post key
+        end
+        def input
+            @app.in
+        end
     end
 end

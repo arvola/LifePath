@@ -19,16 +19,21 @@ module Rapid
             debuglog "Post raw: " << @post_raw
         end
 
-        def get key
-            if !defined? @query
+        def get key = nil
+            unless defined? @query
                 @query = Input.parse @query_raw
                 debuglog "Query string parsed: " << @query.to_s
             end
 
-            return @query[key] if @query.has_key?(key)
-            nil
+            if key.nil?
+                @query
+            elsif @query.has_key? key
+                @query[key]
+            else
+                nil
+            end
         end
-        def post key
+        def post key = nil
             return nil if @post_raw.nil?
 
             unless defined? @post
@@ -36,15 +41,21 @@ module Rapid
                 debuglog "POST string parsed: " << @post.to_s
             end
 
-            return @post[key] if @post.has_key?(key)
-            nil
+            if key.nil?
+                @post
+            elsif @post.has_key? key
+                @post[key]
+            else
+                nil
+            end
         end
 
         def Input.parse string
             arr = {}
             string.split(/&|;/).each do |v|
+                debuglog "Parsing " + v.to_s
                 key, value = Input.parse_pair v
-                arr[key.downcase.to_sym] = CGI::unescape(value)
+                arr[key.downcase.to_sym] = CGI::unescape(value) if value
             end
             arr
         end

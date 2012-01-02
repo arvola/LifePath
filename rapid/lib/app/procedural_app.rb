@@ -39,6 +39,13 @@ module Rapid
       puts '</pre>'
     end
 
+    def get key = nil
+        @in.get key
+    end
+    def post key = nil
+        @in.post key
+    end
+
     # Runs the controller
     def run
       debuglog '--------- Running app ' << self.class.to_s

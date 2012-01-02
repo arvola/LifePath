@@ -3,9 +3,11 @@
 # Author:: Mikael Arvola
 # License:: MIT
 
+require 'temple'
 require 'slim'
 require 'tilt'
 require 'templates'
+Slim::Engine.set_default_options :pretty => true
 
 # Methods for creating pages from templates
 module Pages
@@ -16,35 +18,35 @@ module Pages
     @slim_cache = {
             base: Tilt.new('templates/base.slim')
     }
-    def self.slim_cache
+    Dir.glob ($BASE_PATH + "/templates/forms/*.slim") do |file|
+        @slim_cache[File.basename(file, ".slim").to_sym] = Tilt.new(file)
+    end
+
+    def Pages.slim_cache
         @slim_cache
     end
     def scope
-        @scope_object ||= Rapid::TemplateScope.new
+        @scope_object ||= Rapid::TemplateScope.new input
     end
 
     def slim_cache
         Pages.slim_cache
     end
 
+    def Pages.tilt template, path
+        slim_cache[template] ||= Tilt.new(path)
+    end
+    def tilt template, path
+        Pages.tilt template, path
+    end
+
     def slim(template, data = {})
         scope.javascript = j
         scope.template = template
-        unless slim_cache.has_key? :base
-            slim_cache[:base] = Tilt.new('templates/base.slim')
-        end
-        unless slim_cache.has_key? template
-            slim_cache[template] = Tilt.new('templates/' + template.to_s + '.slim')
-        end
+        scope.data = data
 
-        slim_cache[:base].render(scope, data) do
-            slim_cache[template].render(scope, data)
-        end
-    end
-
-    class Filter < Temple::HTML::Filter
-        def on_multi *exps
-            p exps
+        tilt(:base, 'templates/base.slim').render(scope, data) do
+            tilt(template, 'templates/' + template.to_s + '.slim').render(scope, data)
         end
     end
 end

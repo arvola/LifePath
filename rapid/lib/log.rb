@@ -12,7 +12,7 @@ $logger = Logger.new('log2.txt')
 # Including the RapidLog module in a class will essentially
 # override this behavior.
 def debuglog *args
-    $logger.debug(*args)
+    #$logger.debug(*args)
 end
 
 def warnlog *args

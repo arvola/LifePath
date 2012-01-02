@@ -5,6 +5,8 @@
 
 $:.unshift(File.expand_path(File.dirname(__FILE__)))
 $:.unshift(File.expand_path(File.dirname(__FILE__)) + "/lib")
+$:.unshift(File.expand_path(File.dirname(__FILE__)) + "/lib/slim/lib")
+$:.unshift(File.expand_path(File.dirname(__FILE__)) + "/lib/temple/lib")
 $BASE_PATH = File.expand_path(File.dirname(__FILE__) + "/../")
 $APPS_PATH = $BASE_PATH + "/apps"
 

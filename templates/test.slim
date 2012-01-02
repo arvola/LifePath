@@ -1,13 +1,13 @@
-p
-  | This is a test of the text block.
-  = foo
-  form
-    .form-item
-      label Email
-      input type="text"
-    .form-item
-      label Password
-      input type="password"
-  == form "foobar"
-  p asd
 
+fform(LoginForm)
+  .form-item
+    label Username
+    ftext(user class="foobar")
+  .form-item
+    label Password
+    fpassword(pass)
+  .form-item
+    label Notes
+    ftextarea(notes)
+      | Fun times to be had.
+  input type="submit" value="Submit"

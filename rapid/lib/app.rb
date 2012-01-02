@@ -11,7 +11,7 @@ require 'input'
 module Rapid
     # Base class for HTTP applications
     class App
-        attr_accessor :status, :content_type, :content, :events
+        attr_accessor :status, :content_type, :content, :events, :in
 
         def initialize env
             # Defaults
@@ -48,6 +48,10 @@ module Rapid
 
         def get?
             @env['REQUEST_METHOD'].casecmp("get") == 0
+        end
+
+        def input
+            @in
         end
 
         # Set HTTP status to not found
@@ -95,7 +99,7 @@ module Rapid
                         else
                             "An Error Has Occured"
                     end
-            @content = render('error.haml', {title: title, message: msg, error_code: code, trace: trace})
+            @content = render('error', {title: title, message: msg, error_code: code, trace: trace})
             warnlog 'Error handler called with "' << msg << '", code ' << code.to_s << ' (trace: ' << trace.to_s << ')'
         end
     end

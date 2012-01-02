@@ -14,7 +14,7 @@ require 'mvc/controller'
 module Rapid
     # MVC based app
     class MvcApp < App
-        include Pages
+
         class << self
             attr_accessor :controller_path, :controller_actions, :controller_cache
         end
@@ -78,7 +78,7 @@ module Rapid
         end
 
         def run_action control, action
-            controller = control.new @env
+            controller = control.new @env, self
             # This check in theory is redundant. Will restore if it becomes
             # a problem.
             #if controller.respond_to? ((action + "_action").to_sym)
