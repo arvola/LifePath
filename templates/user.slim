@@ -1,0 +1,13 @@
+- if message
+  h3 = message
+fform(UserForm)
+  .form-item
+    label Username
+    ftext(user class="foobar")
+  .form-item
+    label Password
+    fpassword(pass)
+  .form-item
+    label Email
+    ftext(email)
+  input type="submit" value="Submit"

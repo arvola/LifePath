@@ -3,13 +3,14 @@
 # Author:: Mikael Arvola
 # License:: MIT
 
-
 require 'app_utility'
+require 'session'
 
 module Rapid
     class Controller
         include Pages
         include AppUtility
+        include SessionUtils
         attr_accessor :app
 
         def initialize env, app

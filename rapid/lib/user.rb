@@ -5,9 +5,12 @@
 
 require 'database'
 require 'auth'
+require 'transaction'
 
 module Rapid
     class User
+        include Transaction
+
         def initialize user_id
             Database.open "user" do |db|
                 @data = db.find_one({"_id" => BSON::ObjectId(user_id)})
@@ -37,10 +40,21 @@ module Rapid
         def User.for_auth email
             data = nil
             Database.open "user" do |db|
-                data = db.find_one({"email" => email}, :fields => ["email", "password"])
+                data = db.find_one({"email" => email}, {:fields => ["email", "password"]})
             end
 
             return data
+        end
+
+        def User.auth email, password
+            unless user = User.for_auth(email)
+                return nil
+            end
+            if Auth.password? user, password
+                User.new user['_id'].to_s
+            else
+                nil
+            end
         end
 
         def user_id
@@ -53,8 +67,12 @@ module Rapid
 
         def []= key, value
             @data[key] = value
+            update "user", {"_id" => @user_id}, {key => value}
+        end
+
+        def end_transaction
             Database.open "user" do |db|
-                db.update({"_id" => @user_id}, {"$set" => {key => value}})
+                do_end_transaction db
             end
         end
 

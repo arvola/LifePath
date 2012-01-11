@@ -11,9 +11,23 @@ module Rapid
         include FormTools
         attr_accessor :javascript, :template, :data
 
+        def TemplateScope.set_scope scope
+            @scope_class = scope
+        end
+
+        private
         def initialize input
             @javascript = {}
             @in = input
+        end
+
+        public
+        def TemplateScope.create input
+            if @scope_class
+                @scope_class.new input
+            else
+                TemplateScope.new input
+            end
         end
 
         def js_vars

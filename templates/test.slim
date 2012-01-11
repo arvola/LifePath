@@ -1,8 +1,10 @@
-
+- if defined? msg
+  h3 = msg
+h4 = boogiewoogie
 fform(LoginForm)
   .form-item
-    label Username
-    ftext(user class="foobar")
+    label E-mail
+    ftext(email class="foobar")
   .form-item
     label Password
     fpassword(pass)

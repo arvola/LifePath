@@ -9,12 +9,15 @@ require 'rack'
 require 'ap'
 require 'router'
 require 'app_utility'
+require 'session'
 
 module Rapid
   # A normal web page script, procedural style
   class ProceduralApp < App
     include Pages
     include AppUtility
+    include SessionUtils
+
     class << self
       attr_accessor :controller_path, :file_cache
     end

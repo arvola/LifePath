@@ -7,12 +7,15 @@ Custom Rack-based Ruby web framework and LifePath web app.
 * Custom syntax for Slim and a DSL for creating form validation
 * MVC controllers have access to model loaders: m.foomodel is a lazy loaded instance of a model called "foomodel"
 * Controllers and apps have access to slim templating
-* Controllers and apps have access to session (lazy loaded). Session tokens are very long and encrypted before sending as cookie
+* Controllers and apps have access to session (lazy loaded). Session tokens are very long and encrypted before sending
+  as cookie
 * Session data is in MongoDB
 * STDOUT capturing through Buffer class
 * MongoDB access. Connections are on-demand and get closed immediately after use
 * Lazy input processing
 * Apps can define their own "routers", rules that determine when the app wants to process a visitor
+* Scope object ("self") for templates can be defined with TemplateScope.set_scope(class). Recommend using a sub-class
+  of TemplateScope for maximum compatibility
 
 
 Performance notes
