@@ -5,25 +5,36 @@
 
 require 'database'
 require 'transaction'
+require 'memcached'
 
 module Rapid
     class Session
         include Transaction
 
         def initialize uuid = nil
-            Database.open "session" do |db|
-                if uuid && BSON::ObjectId.legal?(uuid)
-                    @data = db.find_one({"_id" => BSON::ObjectId(uuid)})
-                    if @data.nil?
+            unless uuid.nil?
+                @data = Mem[uuid]
+                puts "Read from memcached. "
+                puts caller
+            end
+
+            unless @data
+                puts "Create from database. "
+                Database.open "session" do |db|
+                    if uuid && BSON::ObjectId.legal?(uuid)
+                        @data = db.find_one({"_id" => BSON::ObjectId(uuid)})
+                        if @data.nil?
+                            @data = {"type" => "temporary"}
+                            @uuid = db.insert(@data)
+                        else
+                            @uuid = @data['_id']
+                        end
+                    else
                         @data = {"type" => "temporary"}
                         @uuid = db.insert(@data)
-                    else
-                        @uuid = @data['_id']
                     end
-                else
-                    @data = {"type" => "temporary"}
-                    @uuid = db.insert(@data)
                 end
+                Mem[uuid] = @data unless uuid.nil?
             end
         end
 
@@ -45,6 +56,8 @@ module Rapid
         end
 
         def Session.delete uuid
+            return unless BSON::ObjectId.legal?(uuid)
+            Mem.delete uuid
             Database.open "session" do |db|
                 @uuid = db.remove("_id" => BSON::ObjectId(uuid))
             end
@@ -61,6 +74,7 @@ module Rapid
         def []= key, value
             @data[key] = value
             update "session", {"_id" => @uuid}, {key => value}
+            Mem[uuid] = @data
         end
 
         def user_id
@@ -82,8 +96,8 @@ module Rapid
                 @session_info = Rapid::Session.new @env['rack.session']['session']
             else
                 @session_info = Rapid::Session.new
+                @env['rack.session']['session'] = @session_info.uuid
             end
-            @env['rack.session']['session'] = @session_info.uuid
             @session_info
         end
 
@@ -96,7 +110,9 @@ module Rapid
             end
             Session.delete old
 
-            @env['rack.session']['session'] = @session_info.uuid
+            if @session_info.uuid.length > 0
+                @env['rack.session']['session'] = @session_info.uuid
+            end
         end
 
         # Returns boolean false if there is no user in the current session,

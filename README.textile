@@ -1,4 +1,4 @@
-RapidRuby / LifePath
+h1. RapidRuby / LifePath
 
 Custom Rack-based Ruby web framework and LifePath web app.
 
@@ -7,20 +7,27 @@ Custom Rack-based Ruby web framework and LifePath web app.
 * Custom syntax for Slim and a DSL for creating form validation
 * MVC controllers have access to model loaders: m.foomodel is a lazy loaded instance of a model called "foomodel"
 * Controllers and apps have access to slim templating
-* Controllers and apps have access to session (lazy loaded). Session tokens are very long and encrypted before sending
-  as cookie
+* Controllers and apps have access to session (lazy loaded). Session tokens are very long and encrypted before sending as cookie
 * Session data is in MongoDB
 * STDOUT capturing through Buffer class
 * MongoDB access. Connections are on-demand and get closed immediately after use
 * Lazy input processing
 * Apps can define their own "routers", rules that determine when the app wants to process a visitor
-* Scope object ("self") for templates can be defined with TemplateScope.set_scope(class). Recommend using a sub-class
-  of TemplateScope for maximum compatibility
+* Scope object ("self") for templates can be defined with TemplateScope.set_scope(class). Recommend using a sub-class of TemplateScope for maximum compatibility
 
 
-Performance notes
+h3. Performance notes
 
+RPS (requests per second) are based on a test server, so should not be taken as absolute values, but rather relative.
+
+* Current baseline is 620 requests per second. The test page for this has two Slim templates rendered with some minor dynamic content.
 * Nested templates through scope object's render have no discernable impact on performance.
-* Reading session variables to a page's logic has a significant negative impact, but only the first one.
-* Writing session variables also has a negative impact, each one introducing more.
+* Reading session variables to a page's logic has a significant negative impact, but only the first one. RPS change: 620 -> 320
+* With memcached enabled, reading session variables is faster. RPS change: 620 -> 480
+* Writing session variables also has a negative impact, each one introducing more. RPS change: 480 -> 290
 * Transactional interface provided to batch saving session variables, makes the price the same as writing one.
+
+
+h3. Gem Dependencies
+
+gem install kgio dalli mongo bson_ext bcrypt-ruby tilt rack json inifile htmlentities encrypted_cookie thor

@@ -44,7 +44,6 @@ module Pages
         scope.javascript = j
         scope.template = template
         scope.data = data
-        ap scope
 
         tilt(:base, 'templates/base.slim').render(scope, data) do
             tilt(template, 'templates/' + template.to_s + '.slim').render(scope, data)

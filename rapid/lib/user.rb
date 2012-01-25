@@ -12,6 +12,7 @@ module Rapid
         include Transaction
 
         def initialize user_id
+            puts "Reading user from database. "
             Database.open "user" do |db|
                 @data = db.find_one({"_id" => BSON::ObjectId(user_id)})
             end

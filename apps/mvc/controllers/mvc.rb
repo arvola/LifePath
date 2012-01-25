@@ -3,7 +3,7 @@ require 'session'
 require 'auth'
 require 'form'
 require 'user'
-require $APPS_PATH + '/lib/scope'
+require $APPS_PATH + '/ext/scope'
 
 class Mvc < Rapid::Controller
     include Rapid
@@ -24,10 +24,9 @@ class Mvc < Rapid::Controller
                 data[:msg] = msg
             end
         end
-        session.uuid
-        ap session.user_id
-        session['type']
-        session['test'] = "foo"
+
+        session['test'] = 'foo'
+
         j['testvar'] = "foobarvar"
         j['testvar2'] = {foo: "bar"}
         puts slim :test, data
